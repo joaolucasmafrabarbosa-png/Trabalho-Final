@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard financeiro</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="carregarLocalStorage()">
+    <header>
+        <div class="div-logo">
+            <div class="logo">
+                <p>JL</p>
+            </div>
+            <h1>Finance</h1>
+        </div>
+
+        <div class="header-right">
+            <button class="botao-6" onclick="mostarCardConifig()">
+                <img src="imagens/gear-six.svg">
+            </button>
+            <button class="botao-7" onclick="mostrarCardContas()">
+                <img src="imagens/user.svg">
+            </button>
+        </div>
+    </header>
+
+    <div class="painel-2">
+        <div class="painel">
+            <div class="div-0">
+                <div>
+                    <h1 id="bemvindo"></h1>
+                    <p class="mensagem">Monitore e controle o que acontece com o seu dinheiro para ter saúde financeira.
+                    </p>
+                </div>
+                <div class="div-0-left">
+                    <button class="botao-4" onclick="mostrarCardPeriodo()">
+                        <img src="imagens/calendar-dots.svg">
+                        <p id="dataDeHoje"></p>
+                    </button>
+                    <button class="botao-8" onclick="cardPeriodo()">
+                        <img src="imagens/share-fat.svg">
+                        Compartilhar
+                    </button>
+                </div>
+            </div>
+            <div class="div-1">
+                <div class="Saldo-1">
+                    <div class="icon">
+                        <img src="imagens/cardholder.svg">
+                    </div>
+                    <p>Saldo total</p>
+                </div>
+                <h1 id="saldo">R$0</h1>
+                <div class="Saldo-2">
+                    <button class="botao-2" onclick="mostarCardGasto()">
+                        <img src="imagens/upload-simple.svg">
+                        <p>Adcionar gasto</p>
+                    </button>
+                    <button class="botao-3" onclick="mostarCardGanho()">
+                        <img src="imagens/download-simple (1).svg">
+                        <p>Adcionar ganho</p>
+                    </button>
+                </div>
+                <div class="maiores">
+                    <p>Transaçoẽs recentes</p>
+                    <div class="card-saldo-1">
+                        <p id="categoria-1" class="categoria">Categoria</p>
+                        <p id="valor-1" class="valor">R$0</p>
+                        <p id="tipo-1" class="tipo">Tipo</p>
+                    </div>
+                    <div class="card-saldo-2">
+                        <p id="categoria-2" class="categoria">Categoria</p>
+                        <p id="valor-2" class="valor">R$0</p>
+                        <p id="tipo-2" class="tipo">Tipo</p>
+                    </div>
+                    <div class="card-saldo-3">
+                        <p id="categoria-3" class="categoria">Categoria</p>
+                        <p id="valor-3" class="valor">R$0</p>
+                        <p id="tipo-3" class="tipo">Tipo</p>
+                    </div>
+                    <div class="card-saldo-4">
+                        <p id="categoria-4" class="categoria">Categoria</p>
+                        <p id="valor-4" class="valor">R$0</p>
+                        <p id="tipo-4" class="tipo">Tipo</p>
+                    </div>
+                </div>
+            </div>
+            <div class="div-2">
+                <div class="DespesaReceita">
+                    <div class="icon">
+                        <img src="imagens/upload-simple.svg">
+                    </div>
+                    <p>Despesa total</p>
+                </div>
+                <h1 id="despesa">R$0</h1>
+            </div>
+
+            <div class="div-3">
+                <div class="DespesaReceita">
+                    <div class="icon">
+                        <img src="imagens/download-simple.svg">
+                    </div>
+                    <p>Receita total</p>
+                </div>
+                <h1 id="receita">R$0</h1>
+            </div>
+            <div class="div-4">
+                <div class="card-grafico">
+                    <div class="top-grafico">
+                        <div class="grafico-left">
+                            <div class="icon">
+                                <img src="imagens/presentation-chart.svg">
+                            </div>
+                            <div class="SelecionarPeriodo">
+                                <h2 class="grafico-titulo">Visão geral de 2026</h2>
+                                <button class="botao-6" onclick="cardPeriodoGrafico()">
+                                    <img src="imagens/caret-down (1).svg">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="grafico-right">
+                            <span class="legenda-barra"></span>
+                            <span class="legenda-texto">Saldo</span>
+                        </div>
+                    </div>
+
+                    <div class="grafico-corpo">
+                        <div class="eixo-y">
+                            <span id="eixo-1">R$</span>
+                            <span id="eixo-2">R$</span>
+                            <span id="eixo-3">R$</span>
+                            <span id="eixo-4">R$</span>
+                            <span id="eixo-5">R$</span>
+                        </div>
+
+                        <div class="barras">
+                            <div class="coluna">
+                                <div class="area">
+                                    <div class="barra" style="height:100%" id="1"></div>
+                                </div><span class="mes">Jan</span>
+                            </div>
+                            <div class="coluna">
+                                <div class="area">
+                                    <div class="barra" style="height:100%" id="2"></div>
+                                </div><span class="mes">Fev</span>
+                            </div>
+                            <div class="coluna">
+                                <div class="area">
+                                    <div class="barra" style="height:100%" id="3"></div>
+                                </div><span class="mes">Mar</span>
+                            </div>
+                            <div class="coluna">
+                                <div class="area">
+                                    <div class="barra" style="height:100%" id="4"></div>
+                                </div><span class="mes">Abr</span>
+                            </div>
+                            <div class="coluna">
+                                <div class="area">
+                                    <div class="barra" style="height:100%" id="5"></div>
+                                </div><span class="mes">Mai</span>
+                            </div>
+                            <div class="coluna">
+                                <div class="area">
+                                    <div class="barra" style="height:100%" id="6"></div>
+                                </div><span class="mes">Jun</span>
+                            </div>
+                            <div class="coluna">
+                                <div class="area">
+                                    <div class="barra" style="height:100%" id="7"></div>
+                                </div><span class="mes">Jul</span>
+                            </div>
+                            <div class="coluna">
+                                <div class="area">
+                                    <div class="barra" style="height:100%" id="8"></div>
+                                </div><span class="mes">Ago</span>
+                            </div>
+                            <div class="coluna">
+                                <div class="area">
+                                    <div class="barra" style="height:100%" id="9"></div>
+                                </div><span class="mes">Set</span>
+                            </div>
+                            <div class="coluna">
+                                <div class="area">
+                                    <div class="barra" style="height:100%" id="10"></div>
+                                </div><span class="mes">Out</span>
+                            </div>
+                            <div class="coluna">
+                                <div class="area">
+                                    <div class="barra" style="height:100%" id="11"></div>
+                                </div><span class="mes">Nov</span>
+                            </div>
+                            <div class="coluna">
+                                <div class="area">
+                                    <div class="barra" style="height:100%" id="12"></div>
+                                </div><span class="mes">Dez</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="div-5">
+                <div class="div-botao">
+                    <button class="botao-5" onclick="cardFiltro()">
+                        <img src="imagens/funnel.svg">
+                    </button>
+                    <button class="botao-5" onclick="cardFiltro()">
+                        <img src="imagens/arrows-down-up.svg">
+                    </button>
+                    <div class="filtro1 escondido">
+                        <p></p>
+                    </div>
+                    <div class="filtro2 escondido">
+                        <p></p>
+                    </div>
+                </div>
+
+                <div class="div-tabela">
+                    <table border="0" id="tabela">
+                        <thead>
+                            <tr>
+                                <th>Tipo</th>
+                                <th>Categoria</th>
+                                <th>Valor</th>
+                                <th>Data</th>
+                            </tr>
+                        </thead>
+                        <tbody id="corpoTabela">
+                            <tr>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- === CARDS === -->
+
+    <div class="Login escondido">
+        <div class="card">
+            <h2 class="titulo">Crie seu perfil</h2>
+            <p class="subtitulo">Escolha um nome para começar.</p>
+
+            <input type="text" id="nome" class="campo campoLogin" placeholder="Seu nome" onclick="tirarVermelho()">
+
+            <button class="botao-1" onclick="cadastrar()">Vamos começar</button>
+        </div>
+    </div>
+
+    <div class="gasto escondido">
+        <div class="card-1">
+            <div class="card-top">
+                <h2 class="titulo">Adcionar gasto</h2>
+                <button class="x" onclick="xGasto()">
+                    <img src="imagens/x.svg">
+                </button>
+            </div>
+            <input type="number" id="valorGasto" class="campo campoGasto1" placeholder="Valor gasto"
+                oninput="tirarVermelho1()">
+
+            <select id="valorGasto" class="campo campoGasto1" oninput="tirarVermelho1()">
+                <option value="" disabled selected>Selecionar uma categoria</option>
+                <option value="Alimentação">Alimentação</option>
+                <option value="Moradia">Moradia</option>
+                <option value="Água, luz e gás">Água, luz e gás</option>
+                <option value="Internet e telefone">Internet e telefone</option>
+                <option value="Transporte">Transporte</option>
+                <option value="Saúde e medicamentos">Saúde e medicamentos</option>
+                <option value="Educação e cursos">Educação e cursos</option>
+                <option value="Lazer e entretenimento">Lazer e entretenimento</option>
+                <option value="Roupas e calçados">Roupas e calçados</option>
+                <option value="Higiene pessoal">Higiene pessoal</option>
+                <option value="Academia e esportes">Academia e esportes</option>
+                <option value="Assinaturas e serviços digitais">Assinaturas e serviços digitais</option>
+                <option value="Compras pessoais">Compras pessoais</option>
+                <option value="Restaurantes e delivery">Restaurantes e delivery</option>
+                <option value="Viagens e hospedagem">Viagens e hospedagem</option>
+                <option value="Impostos e taxas">Impostos e taxas</option>
+                <option value="Tarifas bancárias">Tarifas bancárias</option>
+                <option value="Pagamento de dívidas">Pagamento de dívidas</option>
+                <option value="Investimentos e poupança">Investimentos e poupança</option>
+                <option value="Outros gastos">Outros gastos</option>
+            </select>
+
+            <input type="date" id="dataGasto" class="campo campoGasto3" oninput="tirarVermelho3()">
+
+            <button class="botao-1" onclick="adcionarGasto()">Adcionar</button>
+        </div>
+    </div>
+
+    <div class="ganho escondido">
+        <div class="card-1">
+            <div class="card-top">
+                <h2 class="titulo">Adcionar ganho</h2>
+                <button class="x" onclick="xGanho()">
+                    <img src="imagens/x.svg">
+                </button>
+            </div>
+            <input type="number" id="valorGanho" class="campo campoGanho1" placeholder="Valor ganho"
+                oninput="tirarVermelho1()">
+
+            <select id="categoriaGanho" class="campo campoGanho2" oninput="tirarVermelho2()">
+                <option value="" disabled selected>Selecionar uma categoria</option>
+                <option value="Salário">Salário</option>
+                <option value="Freelances">Freelances</option>
+                <option value="Comissões">Comissões</option>
+                <option value="Bônus e premiações">Bônus e premiações</option>
+                <option value="Horas extras">Horas extras</option>
+                <option value="Estágio">Estágio</option>
+                <option value="Jovem Aprendiz">Jovem Aprendiz</option>
+                <option value="Venda de produtos">Venda de produtos</option>
+                <option value="Prestação de serviços">Prestação de serviços</option>
+                <option value="Aluguel recebido">Aluguel recebido</option>
+                <option value="Dividendos">Dividendos</option>
+                <option value="Juros de investimentos">Juros de investimentos</option>
+                <option value="Rendimentos de CDB e CDI">Rendimentos de CDB e CDI</option>
+                <option value="Rendimentos de poupança">Rendimentos de poupança</option>
+                <option value="Lucros de ações">Lucros de ações</option>
+                <option value="Lucros de criptomoedas">Lucros de criptomoedas</option>
+                <option value="Reembolso recebido">Reembolso recebido</option>
+                <option value="Mesada">Mesada</option>
+                <option value="Presentes em dinheiro">Presentes em dinheiro</option>
+                <option value="Outros ganhos">Outros ganhos</option>
+            </select>
+
+            <input type="date" id="dataGanho" class="campo campoGanho3" placeholder="Data do gasto ; ex:"
+                oninput="tirarVermelho3()">
+
+            <button class="botao-1" onclick="adcionarGanho()">Adcionar</button>
+        </div>
+    </div>
+
+    <div class="filtro escondido">
+        <div class="card-1">
+            <div class="card-top">
+                <h2 class="titulo">Adcionar filtro</h2>
+                <button class="x" onclick="xFiltro()">
+                    <img src="imagens/x.svg">
+                </button>
+            </div>
+
+            <select id="tipoFiltro" class="campo Filtro1" oninput="tirarVermelho1()">
+                <option value="0" disabled selected>Filtre por tipo</option>
+                <option value="Gasto">Gasto</option>
+                <option value="Ganho">Ganho</option>
+            </select>
+
+            <select id="categoriaFiltro" class="campo Filtro2" oninput="tirarVermelho2()">
+                <option value="" disabled selected>Filtre por categoria</option>
+
+                <optgroup label="Ganhos">
+                    <option value="Salário">Salário</option>
+                    <option value="Freelances">Freelances</option>
+                    <option value="Comissões">Comissões</option>
+                    <option value="Bônus e premiações">Bônus e premiações</option>
+                    <option value="Horas extras">Horas extras</option>
+                    <option value="Estágio">Estágio</option>
+                    <option value="Jovem Aprendiz">Jovem Aprendiz</option>
+                    <option value="Venda de produtos">Venda de produtos</option>
+                    <option value="Prestação de serviços">Prestação de serviços</option>
+                    <option value="Aluguel recebido">Aluguel recebido</option>
+                    <option value="Dividendos">Dividendos</option>
+                    <option value="Juros de investimentos">Juros de investimentos</option>
+                    <option value="Rendimentos de CDB e CDI">Rendimentos de CDB e CDI</option>
+                    <option value="Rendimentos de poupança">Rendimentos de poupança</option>
+                    <option value="Lucros de ações">Lucros de ações</option>
+                    <option value="Lucros de criptomoedas">Lucros de criptomoedas</option>
+                    <option value="Reembolso recebido">Reembolso recebido</option>
+                    <option value="Mesada">Mesada</option>
+                    <option value="Presentes em dinheiro">Presentes em dinheiro</option>
+                    <option value="Outros ganhos">Outros ganhos</option>
+                </optgroup>
+
+                <optgroup label="Gastos">
+                    <option value="Alimentação">Alimentação</option>
+                    <option value="Moradia">Moradia</option>
+                    <option value="Água, luz e gás">Água, luz e gás</option>
+                    <option value="Internet e telefone">Internet e telefone</option>
+                    <option value="Transporte">Transporte</option>
+                    <option value="Saúde e medicamentos">Saúde e medicamentos</option>
+                    <option value="Educação e cursos">Educação e cursos</option>
+                    <option value="Lazer e entretenimento">Lazer e entretenimento</option>
+                    <option value="Roupas e calçados">Roupas e calçados</option>
+                    <option value="Higiene pessoal">Higiene pessoal</option>
+                    <option value="Academia e esportes">Academia e esportes</option>
+                    <option value="Assinaturas e serviços digitais">Assinaturas e serviços digitais</option>
+                    <option value="Compras pessoais">Compras pessoais</option>
+                    <option value="Restaurantes e delivery">Restaurantes e delivery</option>
+                    <option value="Viagens e hospedagem">Viagens e hospedagem</option>
+                    <option value="Impostos e taxas">Impostos e taxas</option>
+                    <option value="Tarifas bancárias">Tarifas bancárias</option>
+                    <option value="Pagamento de dívidas">Pagamento de dívidas</option>
+                    <option value="Investimentos e poupança">Investimentos e poupança</option>
+                    <option value="Outros gastos">Outros gastos</option>
+                </optgroup>
+            </select>
+
+            <button class="botao-1" onclick="adcionarFiltro()">Adcionar</button>
+        </div>
+    </div>
+
+    <div class="periodoGrafico escondido">
+        <div class="card-1">
+            <div class="card-top">
+                <h2 class="titulo">Selecionar ano</h2>
+                <button class="x" onclick="xPeriodoGrafico()">
+                    <img src="imagens/x.svg">
+                </button>
+            </div>
+
+            <select id="tipoPeriodo" class="campo periodo1" oninput="tirarVermelho1()">
+                <option value="0" disabled selected>Selecionar um ano</option>
+                <option value="2026">2026</option>
+                <option value="2025">2025</option>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+            </select>
+
+            <button class="botao-1" onclick="adcionarPeriodoGrafico()">Adcionar</button>
+        </div>
+    </div>
+
+    <div class="periodo escondido">
+        <div class="card-1">
+            <div class="card-top">
+                <h2 class="titulo">Selecionar Periodo</h2>
+                <button class="x" onclick="xPeriodo()">
+                    <img src="imagens/x.svg">
+                </button>
+            </div>
+            <p>Data inicial</p>
+            <input type="date" id="dataInicial" class="campo campoData1" oninput="tirarVermelho3()">
+            <p>Data final</p>
+            <input type="date" id="dataFinal" class="campo campoData2" oninput="tirarVermelho3()">
+
+            <button class="botao-1" onclick="adcionarPeriodo()">Adcionar</button>
+        </div>
+    </div>
+
+    <div class="configuracao escondido">
+        <div class="card-1">
+            <div class="card-top">
+                <h2 class="titulo">Configurações</h2>
+                <button class="x" onclick="xConfiguracao()">
+                    <img src="imagens/x.svg">
+                </button>
+            </div>
+
+            <p>Editar nome</p>
+            <input type="text" id="config" class="campo nomeNovo" placeholder="Nome novo" oninput="tirarVermelho2()">
+            <button class="botao-1" onclick="atualizarNome()">Atualizar</button>
+
+            <button class="botao-1" onclick="limpar()">Limpar tudo</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+<!-- 
+localStorage.clear();
+location.reload(); 
+-->

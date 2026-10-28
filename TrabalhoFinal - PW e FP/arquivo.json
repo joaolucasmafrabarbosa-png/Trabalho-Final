@@ -1,0 +1,32 @@
+{
+  "nome": "",
+  "meta": [
+    {
+      "nomeMeta": "",
+      "valorAlvo": 0.0,
+      "prazo": "",
+      "depositos": [
+        {
+          "valorDeposito": 0.0,
+          "dataDeposito": ""
+        }
+      ]
+    }
+  ],
+  "ganho": [
+    {
+      "valorGanho": 0.0,
+      "categoriaGanho": "",
+      "descricaoGanho": "",
+      "dataGanho": ""
+    }
+  ],
+  "gasto": [
+    {
+      "valorGasto": 0.0,
+      "categoriaGasto": "",
+      "descricaoGasto": "",
+      "dataGasto": ""
+    }
+  ]
+}

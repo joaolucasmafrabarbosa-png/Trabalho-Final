@@ -1,0 +1,1453 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  background-color: #111111;
+  padding-top: 20px;
+}
+
+header {
+  height: 85px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+header h1 {
+  padding-left: 15px;
+  color: #fff;
+}
+
+.div-logo {
+  display: flex;
+  align-items: center;
+  margin-left: 90px;
+}
+
+.logo {
+  width: 55px;
+  height: 55px;
+  border-radius: 15px;
+  background-color: #2B98DF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo p {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 1000;
+}
+
+.header-right {
+  margin-right: 60px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.botao-6 {
+  all: unset;
+  width: 50px;
+  height: 50px;
+  background-color: #1f1f23;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.botao-6 img {
+  width: 30px;
+  height: 30px;
+}
+
+.botao-7 {
+  all: unset;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.botao-7 img {
+  width: 100%;
+  height: 100%;
+  border-radius: 65px;
+}
+
+.fotoDePerfil2 {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.fotoDePerfil2 img {
+  width: 100%;
+  height: 100%;
+  border-radius: 200px;
+}
+
+.painel-2 {
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.painel {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr;
+  grid-template-rows: auto auto 500px auto;
+  gap: 20px;
+  background-color: #161616;
+  padding: 25px;
+  border-radius: 35px;
+  margin-left: 20px;
+  margin-bottom: 25px;
+}
+
+.div-1,
+.div-2,
+.div-3,
+.div-4,
+.div-5 {
+  min-width: 0;
+  background-color: #1B1B1B;
+  border: 2px solid #262626;
+  border-radius: 15px;
+}
+
+.icon {
+  flex: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  background-color: #2D2D2D;
+  margin-right: 25px;
+}
+
+.div-0 {
+  min-width: 0;
+  min-height: 70px;
+  grid-column: 1/4;
+  grid-row: 1/2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.div-0 h1 {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.mensagem {
+  font-size: 17px;
+  color: #727272;
+}
+
+.botao-4 {
+  all: unset;
+  font-size: 16px;
+  font-weight: 500;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 40px;
+  gap: 20px;
+  color: #fff;
+  background: linear-gradient(180deg, #2c2c2c 0%, #1c1c1c 100%);
+  border: 1px solid #3a3a3a;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 2px 8px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.botao-4 img {
+  width: 20px;
+  height: 20px;
+}
+
+.div-1 {
+  grid-column: 1/2;
+  grid-row: 2/4;
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+  padding: 15px 25px 35px 25px;
+}
+
+.div-1,
+.div-2 p,
+.div-3 p {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.div-1 h1 {
+  color: #fff;
+  font-size: 50px;
+  grid-row: 2/3;
+  margin-top: 10px;
+  overflow-wrap: anywhere;
+}
+
+.Saldo-1 {
+  min-height: 66px;
+  grid-row: 1/2;
+  display: flex;
+  align-items: center;
+}
+
+.Saldo-2 {
+  min-height: 80px;
+  grid-row: 3/4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+}
+
+.botao-2,
+.botao-3 {
+  min-width: 0;
+  align-self: start;
+  min-height: 65px;
+  padding: 0 14px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 12px;
+  font-size: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, .4);
+  transition: opacity .2s, transform .1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.botao-2 p,
+.botao-3 p {
+  margin-left: 15px;
+}
+
+.botao-2 {
+  background-color: #2B98DF;
+  color: #fff;
+}
+
+.maiores {
+  grid-row: 4/5;
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px auto auto;
+  gap: 20px;
+}
+
+.maiores>p {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+
+.card-saldo-1,
+.card-saldo-2,
+.card-saldo-3,
+.card-saldo-4 {
+  min-width: 0;
+  min-height: 128px;
+  background-color: #282828;
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.categoria {
+  font-size: 20px;
+  color: #727272;
+  overflow-wrap: anywhere;
+}
+
+.porcentagem {
+  font-size: 30px;
+  color: #fff;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+.tipo {
+  font-size: 15px;
+  background-color: rgba(214, 214, 214, 0.308);
+  color: rgb(253, 253, 253);
+  text-align: center;
+  width: 50px;
+  border-radius: 5px;
+}
+
+.vermelho {
+  background-color: rgba(255, 0, 0, 0.308);
+  color: rgb(255, 81, 81);
+  text-align: center;
+  width: 50px;
+  border-radius: 5px;
+}
+
+.verde {
+  background-color: rgba(43, 255, 0, 0.308);
+  color: rgb(101, 255, 81);
+  text-align: center;
+  width: 50px;
+  border-radius: 5px;
+}
+
+.div-2,
+.div-3 {
+  min-height: 175px;
+  grid-row: 2/3;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  padding: 15px 25px;
+}
+
+.div-2 {
+  grid-column: 2/3;
+}
+
+.div-3 {
+  grid-column: 3/4;
+}
+
+.div-2 h1,
+.div-3 h1 {
+  color: #fff;
+  font-size: 40px;
+  grid-row: 2/3;
+  margin-top: 10px;
+  overflow-wrap: anywhere;
+}
+
+.DespesaReceita {
+  min-height: 66px;
+  grid-row: 1/2;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.div-4 {
+  grid-column: 2/4;
+  grid-row: 3/4;
+  padding-bottom: 20px;
+}
+
+.card-grafico {
+  height: 100%;
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-grafico {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.grafico-left {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+}
+
+.grafico-titulo {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.SelecionarPeriodo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.SelecionarPeriodo button {
+  all: unset;
+  cursor: pointer;
+}
+
+.grafico-right {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legenda-barra {
+  width: 8px;
+  height: 20px;
+  background-color: #2f8cff;
+  border-radius: 3px;
+}
+
+.legenda-texto {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.grafico-corpo {
+  flex: 1;
+  display: flex;
+  gap: 15px;
+  min-height: 0;
+}
+
+.eixo-y {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 46px;
+  padding-bottom: 28px;
+  color: #727272;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.barras {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  gap: 14px;
+}
+
+.coluna {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.area {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  padding-top: 46px;
+}
+
+.barra {
+  position: relative;
+  width: 100%;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background .2s;
+}
+
+.azul-barra {
+  background: linear-gradient(180deg, #2f8cff 0%, #2B98DF22 100%);
+}
+
+.vermelho-barra {
+  background: linear-gradient(180deg, red 0%, #2B98DF22 100%);
+}
+
+.mes {
+  height: 28px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: #727272;
+  font-size: 14px;
+}
+
+.div-5 {
+  grid-column: 1/4;
+  grid-row: 4/5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 25px;
+}
+
+.div-botao {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.botao-5 {
+  all: unset;
+  width: 50px;
+  height: 50px;
+  background-color: #1f1f23;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.filtro1,
+.filtro2,
+.filtro3 {
+  all: unset;
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+  min-height: 35px;
+  background-color: #1f1f23;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  color: #fff;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.filtro1 p,
+.filtro2 p,
+.filtro3 p {
+  overflow-wrap: anywhere;
+}
+
+.div-tabela {
+  width: 100%;
+  border-radius: 16px;
+  overflow-x: auto;
+}
+
+#tabela {
+  width: 100%;
+  border-collapse: collapse;
+  color: #fff;
+  font-size: 14px;
+}
+
+#tabela thead {
+  background-color: #1f1f23;
+  color: #c4c4c4;
+  height: 65px;
+}
+
+#tabela th {
+  text-align: left;
+  padding: 0 16px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+#tabela tbody {
+  background-color: #1e1e1e;
+}
+
+#tabela td {
+  padding: 22px 16px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+#tabela tbody tr:hover {
+  background-color: #1c1c1c;
+}
+
+.vermelho-filtro {
+  color: rgb(255, 81, 81);
+}
+
+.verde-filtro {
+  color: rgb(101, 255, 81);
+}
+
+.Login,
+.contas,
+.mudarDeConta,
+.gasto,
+.ganho,
+.filtro,
+.periodo,
+.periodoGrafico,
+.configuracao,
+.adcionarCategoria,
+.excluir {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  padding: 16px;
+  overflow-y: auto;
+  background-color: #161616d0;
+}
+
+.card,
+.card-1 {
+  width: 100%;
+  max-width: 420px;
+  margin: auto;
+  padding: 36px 30px;
+  background: #111111;
+  border: 2px solid #262626;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: #fff;
+  font-family: Inter, sans-serif;
+}
+
+.card-1 {
+  position: relative;
+}
+
+.card-top {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.titulo {
+  margin: 0;
+  font-size: 24px;
+  color: #fff;
+}
+
+.subtitulo {
+  margin: 0;
+  color: #8a8a8a;
+  font-size: 14px;
+  text-align: center;
+}
+
+.x {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.campo {
+  width: 100%;
+  max-width: 340px;
+  min-width: 0;
+  padding: 14px 16px;
+  background: #1a1a1a;
+  border: 1px solid #262626;
+  border-radius: 12px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color .2s;
+  color: #d9d9d9;
+}
+
+.campo::placeholder {
+  color: #6f6f6f;
+}
+
+.campo:focus {
+  border-color: #555;
+}
+
+.cardSenha {
+  width: 100%;
+  display: grid;
+  grid-column: 1fr 32px;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 340px;
+  min-width: 0;
+  padding: 14px 16px;
+  background: #1a1a1a;
+  border: 1px solid #262626;
+  border-radius: 12px;
+  outline: none;
+  transition: border-color .2s;
+}
+
+.campoSenha,
+.campoSenha2 {
+  all: unset;
+  grid-column: 1/2;
+  width: 100%;
+  color: #d9d9d9;
+  font-size: 15px;
+}
+
+.campoSenha::placeholder,
+.campoSenha2::placeholder {
+  color: #6f6f6f;
+}
+
+.campoSenha:focus,
+.campoSenha2:focus {
+  border-color: #555;
+}
+
+.cardSenha img {
+  width: 20px;
+}
+
+.cardSenha button {
+  all: unset;
+  cursor: pointer;
+  grid-column: 2/3;
+}
+
+.ativacao-red {
+  border: 1px solid red;
+}
+
+.ativacao-green {
+  border: 1px solid green;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #d9d9d9;
+  caret-color: #d9d9d9;
+  box-shadow: 0 0 0 1000px #1a1a1a inset;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+.botao-1 {
+  width: 100%;
+  max-width: 340px;
+  padding: 14px;
+  margin-top: 10px;
+  background: linear-gradient(180deg, #ffffff, #d9d9d9);
+  color: #111;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, .4);
+  transition: opacity .2s, transform .1s;
+}
+
+.botao-1:hover {
+  opacity: .9;
+}
+
+.botao-1:active {
+  transform: scale(.98);
+}
+
+.escondido {
+  display: none;
+}
+
+@media (max-width: 1799px) {
+
+  .botao-2,
+  .botao-3 {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 1599px) {
+
+  .botao-2,
+  .botao-3 {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 1439px) {
+
+  .botao-2,
+  .botao-3 {
+    font-size: 16px;
+  }
+
+  .div-1,
+  .div-2 p,
+  .div-3 p,
+  .div-0 h1,
+  .grafico-titulo,
+  .legenda-texto {
+    font-size: 27px;
+  }
+
+  .div-1 h1 {
+    font-size: 44px;
+  }
+
+  .div-2 h1,
+  .div-3 h1 {
+    font-size: 36px;
+  }
+
+  .porcentagem {
+    font-size: 27px;
+  }
+
+  .categoria {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1365px) {
+
+  .botao-2,
+  .botao-3 {
+    font-size: 14px;
+  }
+
+  .div-1,
+  .div-2 p,
+  .div-3 p,
+  .div-0 h1,
+  .grafico-titulo,
+  .legenda-texto {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .painel {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .div-0,
+  .div-1,
+  .div-4,
+  .div-5 {
+    grid-column: 1 / 3;
+    grid-row: auto;
+  }
+
+  .div-2,
+  .div-3 {
+    grid-column: auto;
+    grid-row: auto;
+    min-height: 0;
+  }
+
+  .div-1 {
+    grid-template-rows: auto;
+    padding-bottom: 20px;
+  }
+
+  .div-0,
+  .Saldo-1,
+  .Saldo-2 {
+    min-height: 0;
+  }
+
+  .maiores {
+    padding-top: 28px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .maiores>p {
+    grid-column: 1 / 5;
+  }
+
+  .card-saldo-1,
+  .card-saldo-2,
+  .card-saldo-3,
+  .card-saldo-4 {
+    min-height: 0;
+  }
+
+  .div-4 {
+    height: 420px;
+  }
+
+  .div-1,
+  .div-2 p,
+  .div-3 p,
+  .div-0 h1,
+  .grafico-titulo,
+  .legenda-texto {
+    font-size: 24px;
+  }
+
+  .div-1 h1 {
+    font-size: 44px;
+  }
+
+  .div-2 h1,
+  .div-3 h1 {
+    font-size: 32px;
+  }
+
+  .porcentagem {
+    font-size: 26px;
+  }
+
+  .categoria {
+    font-size: 18px;
+  }
+
+  .botao-2,
+  .botao-3 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .div-logo {
+    margin-left: 24px;
+  }
+
+  .header-right {
+    margin-right: 24px;
+  }
+
+  .painel-2 {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+
+  .painel {
+    margin-left: 0;
+    border-radius: 28px;
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .div-0 {
+    gap: 16px;
+  }
+
+  .mensagem {
+    display: none;
+  }
+
+  .icon {
+    width: 44px;
+    height: 44px;
+    margin-right: 22px;
+  }
+
+  .div-1,
+  .div-2,
+  .div-3,
+  .card-grafico,
+  .div-5 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .Saldo-2 {
+    column-gap: 32px;
+  }
+
+  .botao-2,
+  .botao-3 {
+    min-height: 56px;
+  }
+
+  .maiores {
+    gap: 16px;
+  }
+
+  .eixo-y {
+    padding-top: 40px;
+    padding-bottom: 26px;
+    font-size: 13px;
+  }
+
+  .area {
+    padding-top: 40px;
+  }
+
+  .mes {
+    height: 26px;
+    font-size: 13px;
+  }
+
+  .barras {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 14px;
+  }
+
+  header {
+    height: 72px;
+    margin-bottom: 10px;
+  }
+
+  header h1 {
+    font-size: 26px;
+  }
+
+  .div-logo {
+    margin-left: 16px;
+  }
+
+  .header-right {
+    margin-right: 16px;
+    gap: 16px;
+  }
+
+  .logo {
+    width: 46px;
+    height: 46px;
+    border-radius: 13px;
+  }
+
+  .logo p {
+    font-size: 29px;
+  }
+
+  .botao-6 {
+    width: 46px;
+    height: 46px;
+    border-radius: 13px;
+  }
+
+  .botao-6 img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .botao-7 {
+    width: 54px;
+    height: 54px;
+  }
+
+  .painel-2 {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .painel {
+    padding: 16px;
+    gap: 14px;
+    border-radius: 24px;
+    margin-bottom: 16px;
+  }
+
+  .botao-4 {
+    height: 44px;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+  }
+
+  .div-1,
+  .div-2,
+  .div-3,
+  .card-grafico,
+  .div-5 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .div-1,
+  .div-2 p,
+  .div-3 p,
+  .div-0 h1,
+  .grafico-titulo,
+  .legenda-texto {
+    font-size: 20px;
+  }
+
+  .div-1 h1 {
+    font-size: 40px;
+  }
+
+  .div-2 h1,
+  .div-3 h1 {
+    font-size: 28px;
+  }
+
+  .porcentagem {
+    font-size: 22px;
+  }
+
+  .categoria {
+    font-size: 16px;
+  }
+
+  .botao-2,
+  .botao-3 {
+    font-size: 18px;
+    min-height: 52px;
+  }
+
+  .Saldo-2 {
+    column-gap: 28px;
+  }
+
+  .maiores {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .maiores>p {
+    grid-column: 1 / 3;
+  }
+
+  .div-4 {
+    height: 380px;
+  }
+
+  .eixo-y {
+    padding-top: 36px;
+    padding-bottom: 24px;
+    font-size: 12px;
+  }
+
+  .area {
+    padding-top: 36px;
+  }
+
+  .mes {
+    height: 24px;
+    font-size: 12px;
+  }
+
+  .barras {
+    gap: 6px;
+  }
+
+  .grafico-corpo {
+    gap: 10px;
+  }
+
+  .div-botao {
+    gap: 12px;
+  }
+
+  #tabela thead {
+    height: 52px;
+  }
+
+  #tabela th {
+    padding: 0 10px;
+    font-size: 12px;
+  }
+
+  #tabela td {
+    padding: 14px 10px;
+    font-size: 13px;
+  }
+
+  .Login,
+  .contas,
+  .mudarDeConta,
+  .gasto,
+  .ganho,
+  .filtro,
+  .periodo,
+  .periodoGrafico,
+  .configuracao,
+  .adcionarCategoria {
+    padding: 12px;
+  }
+
+  .card,
+  .card-1 {
+    padding: 32px 20px 28px;
+  }
+
+  .campo {
+    font-size: 16px;
+  }
+
+  .campoSenha,
+  .campoSenha2 {
+    font-size: 16px;
+  }
+
+  .x {
+    top: 8px;
+    right: 8px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .painel {
+    grid-template-columns: 1fr;
+  }
+
+  .div-0,
+  .div-1,
+  .div-2,
+  .div-3,
+  .div-4,
+  .div-5 {
+    grid-column: auto;
+  }
+
+  .Saldo-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 10px;
+  }
+
+  header {
+    height: 64px;
+  }
+
+  header h1 {
+    font-size: 22px;
+    padding-left: 10px;
+  }
+
+  .div-logo {
+    margin-left: 12px;
+  }
+
+  .header-right {
+    margin-right: 12px;
+    gap: 12px;
+  }
+
+  .logo {
+    width: 42px;
+    height: 42px;
+  }
+
+  .logo p {
+    font-size: 26px;
+  }
+
+  .botao-6 {
+    width: 34px;
+    height: 34px;
+  }
+
+  .botao-6 img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .botao-7 {
+    width: 48px;
+    height: 48px;
+  }
+
+  .painel-2 {
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+
+  .painel {
+    padding: 12px;
+    gap: 12px;
+    border-radius: 20px;
+  }
+
+  .div-0 {
+    gap: 12px;
+  }
+
+  .div-0 p {
+    font-size: 10px;
+  }
+
+  .botao-4 {
+    height: 25px;
+    gap: 5px;
+  }
+
+  .botao-4 img {
+    width: 15px;
+  }
+
+  .icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    margin-right: 18px;
+  }
+
+  .icon img {
+    width: 80%;
+  }
+
+  .div-1,
+  .div-2,
+  .div-3,
+  .div-5 {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .card-grafico {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .div-1,
+  .div-2 p,
+  .div-3 p,
+  .div-0 h1 {
+    font-size: 18px;
+  }
+
+  .grafico-titulo,
+  .legenda-texto {
+    font-size: 14px;
+  }
+
+  .legenda-barra {
+    height: 16px;
+    width: 3px;
+  }
+
+  .div-1 h1 {
+    font-size: 34px;
+  }
+
+  .div-2 h1,
+  .div-3 h1 {
+    font-size: 24px;
+  }
+
+  .porcentagem {
+    font-size: 20px;
+  }
+
+  .categoria {
+    font-size: 14px;
+  }
+
+  .botao-2,
+  .botao-3 {
+    font-size: 16px;
+    min-height: 48px;
+  }
+
+  .maiores {
+    gap: 12px;
+  }
+
+  .card-saldo-1,
+  .card-saldo-2,
+  .card-saldo-3,
+  .card-saldo-4 {
+    padding: 12px;
+  }
+
+  .tipo {
+    font-size: 12px;
+  }
+
+  .div-4 {
+    height: 320px;
+  }
+
+  .eixo-y {
+    padding-top: 32px;
+    padding-bottom: 22px;
+    font-size: 9px;
+  }
+
+  .area {
+    padding-top: 32px;
+  }
+
+  .mes {
+    height: 22px;
+    font-size: 10px;
+  }
+
+  .barras {
+    gap: 2px;
+  }
+
+  .grafico-corpo {
+    gap: 4px;
+  }
+
+  .div-botao {
+    gap: 10px;
+  }
+
+  #tabela {
+    font-size: 12px;
+  }
+
+  .botao-5 {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    margin-right: 18px;
+  }
+
+  .botao-5 img {
+    width: 80%;
+  }
+
+  #tabela th {
+    padding: 0 8px;
+    font-size: 11px;
+  }
+
+  #tabela td {
+    padding: 12px 8px;
+    font-size: 12px;
+  }
+
+  .DespesaReceita {
+  min-height: 36px;
+  grid-row: 1/2;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+}
